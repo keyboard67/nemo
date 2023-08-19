@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+     <head>
+        <title>
+         randomnamber
+        </title>
+     </head>
+     <body>
+        <label for="start">start:</label>
+        <input type="number" id="start" name="start">
+        <br><br>
+        <h3 id=""output">,</h3>
+        <label for="stop">Stop:</label>
+        <input type="number" id="stop" name="stop">
+        <button onclick="generate()">random</button>
+        <h3 id=""output">,</h3>
+    <script>
+        function generate() {
+     const min =  Number(document.getElementById("start").value)
+     const max = Number(document.getElementById("stop").value)
+     
+     const n= Math.floor(Math.random() * (max - min) ) + min;
+    
+     document.getElementById("output").innerHTML = n + ""
+        }
+
+    
+    </script>     
+
+     </body>
+</html>
